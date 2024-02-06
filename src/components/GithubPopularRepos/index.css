@@ -1,1 +1,34 @@
 /* Write your CSS here */
+.course-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+.heading {
+  font-family: 'Lobster';
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
+.languages-list {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: space-around;
+  align-items: center;
+}
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 20%;
+}
+.failure-img {
+  height: 50%;
+  width: 50%;
+}
+.failure-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
