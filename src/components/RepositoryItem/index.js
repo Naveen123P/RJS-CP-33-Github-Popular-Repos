@@ -11,32 +11,32 @@ const RepositoryItem = props => {
         <img src={avatarUrl} alt={name} className="avatar-img" />
         <h1 className="avatar-name">{name}</h1>
       </div>
-      <ul className="counts-list">
-        <li>
+      <div className="counts-list">
+        <div className="count-item">
           <img
             src="https://assets.ccbp.in/frontend/react-js/stars-count-img.png"
-            alt="star"
-            className="star"
+            alt="stars"
+            className="icon"
           />
           <p className="count-text"> {starsCount}</p>
-        </li>
-        <li>
+        </div>
+        <div className="count-item">
           <img
             src="https://assets.ccbp.in/frontend/react-js/forks-count-img.png"
             alt="forks"
-            className="forks"
+            className="icon"
           />
           <p className="count-text"> {forksCount}</p>
-        </li>
-        <li>
+        </div>
+        <div className="count-item">
           <img
             src="https://assets.ccbp.in/frontend/react-js/issues-count-img.png"
             alt="open issues"
-            className="issues"
+            className="icon"
           />
           <p className="count-text"> {issuesCount}</p>
-        </li>
-      </ul>
+        </div>
+      </div>
     </li>
   )
 }

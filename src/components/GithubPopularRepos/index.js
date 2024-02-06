@@ -31,19 +31,12 @@ class GithubPopularRepos extends Component {
     this.setState({isLoading: true})
 
     const url = `https://apis.ccbp.in/popular-repos?language=${selectedLanguageId}`
-    const options = {
-      headers: {
-        authorization:
-          'Bearer 7e7613420c982725c51779f3763ac700fb2120ea0f9fb21bacdebb4a7c0d3736',
-      },
-      method: 'GET',
-    }
-    const response = await fetch(url, options)
+    const response = await fetch(url)
     console.log(response)
     if (response.ok) {
       const data = await response.json()
       console.log(data)
-      const updatedData = data.map(course => ({
+      const updatedData = data.popular_repos.map(course => ({
         name: course.name,
         id: course.id,
         issuesCount: course.issues_count,
@@ -91,12 +84,15 @@ class GithubPopularRepos extends Component {
             />
           ))}
         </ul>
-        {/* {isLoading : } */}
-        <ul className="courses-list">
-          {coursesList.map(course => (
-            <RepositoryItem courseDetails={course} key={course.id} />
-          ))}
-        </ul>
+        {isLoading ? (
+          this.renderLoader()
+        ) : (
+          <ul className="courses-list">
+            {coursesList.map(course => (
+              <RepositoryItem courseDetails={course} key={course.id} />
+            ))}
+          </ul>
+        )}
       </>
     )
   }

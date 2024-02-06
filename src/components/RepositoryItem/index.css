@@ -2,15 +2,16 @@
 .course-item {
   list-style-type: none;
   background-color: #f8f8ff;
-  height: 200px;
+  height: 300px;
   width: 150px;
   border-radius: 10px;
   padding: 10px;
+  margin: 10px;
 }
 .avatar-img-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 .avatar-img {
   height: 75px;
@@ -18,16 +19,17 @@
 }
 .avatar-name {
   color: #e73959;
+  font-weight: 700;
+  font-size: smaller;
 }
 .counts-list {
   list-style-type: none;
 }
-.star {
-  size: 7px;
+.icon {
+  height: 15px;
+  width: 15px;
 }
-.forks {
-  size: 7px;
-}
-.issues {
-  size: 7px;
+.count-item {
+  display: flex;
+  align-items: center;
 }
